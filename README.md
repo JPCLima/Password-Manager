@@ -2,6 +2,9 @@
 
 This is a simple password manager, created in Flash and SQLAlchemy to store the data.
 
+You can try it [here](https://passmanagerapp.herokuapp.com/) 🚀
+
+
 ## ScreenShot 
 ![alt text](/img/app.png)
 
