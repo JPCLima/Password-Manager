@@ -3,7 +3,7 @@
 This is a simple password manager, created in Flash and SQLAlchemy to store the data.
 
 ## ScreenShot 
-![alt text](img\app.png)
+![alt text](/img/app.png)
 
 ## Install
 1. Clone the repo
