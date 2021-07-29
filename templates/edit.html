@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="#" method="post">
+    <label for="application">Application:</label>
+    <input type="text" name="application" value="{{ record.application }}" autocomplete="off">
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="{{ record.password }}" autocomplete="off">
+    <input type="submit" value="Edit" class="form-control">
+</form>
+{% endblock %}

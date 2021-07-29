@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<div>
+    <table class="content-table sortable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Application</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            {% for record in all_records %}
+            <tr>
+                <td><a href="/edit/{{ record._id }}">{{ record._id }}</a></td>
+                <td><a href="/edit/{{ record._id }}">{{ record.application }}</a></td>
+                <td>
+                    <a href="/edit/{{ record._id }}">{{ record.password }}</a>
+                </td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+<script>
+
+    const button = document.getElementsByClassName('eye');
+    button.addEventListener('click', event => {
+        button.style = `Click count: ${event.detail}`;
+    });
+
+
+</script>

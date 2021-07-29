@@ -8,7 +8,7 @@
     background-color: #284b63;
 }
 
-h1, h2,  li, a, label, input {
+h1, h2,  li, a, label, input, p, th{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #ffffff;
@@ -32,6 +32,10 @@ h1{
 
 h2{
     letter-spacing: 1px;
+}
+
+lable{
+    font-size: 10px;
 }
 
 .nav-links{
@@ -87,5 +91,48 @@ input {
     border-radius: 10px;
     background: #33607e;
     padding: 0.7rem 2.5rem;
+}
+
+/* Table */
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px; 
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-table thead tr{
+    background-color: #14232e;
+    color: #fafafa;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.content-table th, .content-table td{
+    padding: 12px 55px;
+    cursor: pointer;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #fafafa;
+}
+
+.content-table tbody tr:hover{
+    background-color: #14232e;
+    font-weight: bold;
+    
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid#14232e;
 }
 
