@@ -5,7 +5,7 @@
 {% block content %}
 <div>
 
-    <form action="?search=&search=" method="GET">
+    <form action="?search=" method="GET" class="search">
         <label for="search">Application Name:</label>
         <input type="text" name="search" autocomplete="off">
         <input type="submit" value="Search" name="search" class="form-control">
@@ -25,6 +25,7 @@
                 <td><a href="/edit/{{ record._id }}">{{ record._id }}</a></td>
                 <td><a href="/edit/{{ record._id }}">{{ record.application }}</a></td>
                 <td><a href="/edit/{{ record._id }}">{{ record.password }}</a></td>
+                <td><a href="/detete/{{ record._id }}"> Delete</a></td>
             </tr>
             {% endfor%}
         </tbody>

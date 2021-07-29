@@ -56,9 +56,11 @@ def edit(r):
         # Update the data
         record.application = application
         record.password = password
-        
-        # Save changes in the Database
-        db.session.commit()
+        try:
+            # Save changes in the Database
+            db.session.commit()
+        except:
+            return "There was an error"
 
         return redirect(url_for('index'))
     else:              
@@ -67,21 +69,25 @@ def edit(r):
    
 @app.route('/search')
 def search():
-    word = request.args.get('search')
-    print(f'---------------------------------------{word}')
-
-
-
+    word = request.args.get('search')  
     if word == '':     
         return render_template('search.html', records=Records.query.all())
-
     else:        
         return render_template('search.html', records=Records.query.filter(Records.application.startswith(word)).all())
 
+@app.route('/detete/<r>')
+def delete_record(r):
+    # ID from the record
+    record = Records.query.get(r) 
+    try:
+        db.session.delete(record)
+        db.session.commit()
+        return redirect('/search?search=')
+    except:
+        return "There was an error"
 
 
-    #search_query = Records.query.filter(Records.application.like(key))
-    #return render_template('search.html', key=key, search_query=search_query)
+
 
 if __name__ == '__main__':
     # Create a Database
